@@ -1,4 +1,6 @@
 .page {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-image: var(--bg-image);
   background-attachment: fixed;
@@ -7,6 +9,7 @@
   background-size: cover;
   padding: 10px;
   font-size: var(--global-font-size);
+  gap: 40px;
 }
 
 .header {
@@ -92,26 +95,67 @@
 .title-decor {
   background-color: var(--accent-color);
   color: #000028;
+  font-weight: 700;
+  line-height: 23.4px;
+  font-size: var(--global-font-size);
 }
 
 .header__text {
   align-self: center;
   max-width: 491px;
   width: min(355px, 491px);
-  line-height: 23.4px;
-  font-weight: 700;
-
 }
 
-@media (min-width: 1024px) {
-  .header__theme-menu {
-    justify-self: center;
-    align-self: start;
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.main__title {
+  color: var(--accent-color);
+  font-size: var(--global-font-size);
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+.section-decor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.main__text-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-decor-normal-weight {
+  font-weight: 400;
+}
+
+.main__decrease-concentration .main__text-blocks {
+    display: grid;
+    gap: 20px;
+}
+
+  .main__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .header__theme-menu-list {
-    flex-direction: row;
-  }
+.main__text-blocks-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.main__text-blocks-link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.main__text-blocks-link:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 @media (min-width: 768px) {
@@ -125,5 +169,55 @@
 
   .page {
     padding: 20px;
+    gap: 60px;
   }
+
+  .main {
+    gap: 80px;
+  }
+
+  .section-decor {
+    grid-template-columns: 236px 1fr;
+  }
+
+  .main__decrease-concentration {
+    grid-template-columns: 1fr;
+  }
+
+  .main__decrease-concentration .main__title {
+    max-width: 236px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__text {
+    min-width: 491px;
+  }
+
+  .section-decor {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .main__decrease-concentration {
+    grid-template-columns: 1fr;
+  }
+
+  .main__decrease-concentration .main__title {
+    max-width: 315px;
+  }
+
+  .main__decrease-concentration .main__text-blocks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
