@@ -1,7 +1,8 @@
 :root {
   --bg-image: url('../images/cover-image-dark.png');
-  --bg-color: #F1B2CE;
+  --text-color: #F1B2CE;
   --accent-color: #FF0070;
+  --accent-color-hover: #FF007066;
   --title-color: #DB00FF;
   --global-font-size: 18px;
 }
