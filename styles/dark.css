@@ -6,4 +6,12 @@
   --title-color: #DB00FF;
 }
 
-@media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url('../images/cover-image-dark.png');
+    --text-color: #F1B2CE;
+    --accent-color: #FF0070;
+    --accent-color-hover: #FF007066;
+    --title-color: #DB00FF;
+  }
+}
