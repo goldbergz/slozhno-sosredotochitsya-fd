@@ -1,5 +1,6 @@
 :root.theme-dark {
   --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: #020538;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --accent-color-hover: #FF007066;
@@ -9,6 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-image: url('../images/cover-image-dark.png');
+    --bg-color: #020538;
     --text-color: #F1B2CE;
     --accent-color: #FF0070;
     --accent-color-hover: #FF007066;
