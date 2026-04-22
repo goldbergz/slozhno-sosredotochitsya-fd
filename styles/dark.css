@@ -1,19 +1,13 @@
 :root.theme-dark {
   --bg-image: url('../images/cover-image-dark.png');
   --bg-color: #020538;
+  --title-decor-color: #000028;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --accent-color-hover: #FF007066;
   --title-color: #DB00FF;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-image: url('../images/cover-image-dark.png');
-    --bg-color: #020538;
-    --text-color: #F1B2CE;
-    --accent-color: #FF0070;
-    --accent-color-hover: #FF007066;
-    --title-color: #DB00FF;
-  }
+  --rec-display: block;
+  --decor-color: var(--accent-color);
+  --menu-color: var(--accent-color);
+  --main-title-color: var(--accent-color);
 }

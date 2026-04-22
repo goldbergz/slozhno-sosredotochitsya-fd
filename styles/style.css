@@ -32,15 +32,15 @@
 .decorated-zone::before {
   top: 10px;
   right: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
 }
 
 .decorated-zone::after {
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
 }
 
 .header__theme-menu {
@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--accent-color);
+  color: var(--menu-color, var(--accent-color));
 }
 
 .header__theme-menu-button {
@@ -79,9 +79,10 @@
 }
 
 .header__rec {
+  display: var(--rec-display);
   position: absolute;
-  top: 0;
-  right: 9px;
+  top: 10px;
+  right: 20px;
   color: var(--accent-color);
   line-height: 1.4;
   text-transform: uppercase;
@@ -106,13 +107,13 @@
   text-transform: lowercase;
   font-weight: 700;
   color: var(--title-color);
-  position: relative;
-  left: -10px;
+  margin-left: -10px;
+  padding: 0 8px;
 }
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #000028;
+  color: var(--title-decor-color);
   font-weight: 700;
   line-height: 23.4px;
   font-size: var(--global-font-size);
@@ -120,7 +121,7 @@
 
 .header__text {
   align-self: center;
-  max-width: 491px;
+  max-width: 364px;
   width: 100%;
 }
 
@@ -138,7 +139,7 @@
 }
 
 .main__title {
-  color: var(--accent-color);
+  color: var(--main-title-color, var(--accent-color));
   font-size: var(--global-font-size);
   line-height: 23.4px;
   font-weight: 700;
@@ -151,7 +152,7 @@
 .main__text-blocks {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   line-height: 23.4px;
 }
 
@@ -215,6 +216,7 @@
   text-transform: lowercase;
   font-weight: 700;
   color: var(--title-color);
+  padding: 16px 8px;
 }
 
 @media (min-width: 768px) {
@@ -233,9 +235,15 @@
     left: 20px;
   }
 
+  .header__rec {
+    top: 20px;
+    right: 30px;
+  }
+
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     left: -20px;
+    margin-left: -30px;
   }
 
   .header__text {
@@ -318,6 +326,10 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .header__text {
+    max-width: 491px;
   }
 
   .main__decrease-concentration {
